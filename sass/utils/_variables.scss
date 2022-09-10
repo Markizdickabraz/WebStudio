@@ -15,6 +15,9 @@ $colors: (
     'color-bg-overlay': rgba(33, 150, 243, 0.9),
     'color-backdrop-modal': rgba(0, 0, 0, 0.2),
     'border-modal-icon': rgba(0, 0, 0, 0.1),
+    'footer-icon-color': rgba(255, 255, 255, 0.1),
+    'footer-form-border': rgba (255, 255, 255, 0.3),
+    // 'footer-placeholder-color': rgba (255, 255, 255, 0.6),
 );
 $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -42,7 +45,7 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
     letter-spacing: 0.03em;
 }
 
-@mixin mobile-nav-text {
+@mixin nav-text {
 
     font-weight: 500;
     font-size: 40px;
@@ -51,7 +54,7 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
     letter-spacing: 0.02em;
 }
 
-@mixin mobile-contact-text {
+@mixin contact-text {
 
     font-weight: 500;
     font-size: 24px;
@@ -59,7 +62,7 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
     letter-spacing: 0.02em;
 }
 
-@mixin mobile-contact-text--accent {
+@mixin contact-text--accent {
 
     font-weight: 500;
     font-size: 34px;
@@ -74,14 +77,95 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
     letter-spacing: 0.02em;
 }
 
-// @mixin roboto-regular {
-//     font-family: 'Roboto', 'sens-serif';
-//     font-style: normal;
-//     font-weight: 400;
-//     font-size: 14px;
-//     line-height: 1.71;
-//     letter-spacing: 0.03em;
-// }
+@mixin hero-title {
+    @media screen and(max-width:767px) {
+        font-weight: 900;
+        font-size: 26px;
+        line-height: 1.62;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+    }
+}
+
+@mixin button {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+}
+
+@mixin advantage-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+@mixin text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+@mixin caption {
+    @media (max-width:767px) {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.17;
+        text-align: center;
+        letter-spacing: 0.03em;
+    }
+
+}
+
+.caption {
+    @include caption;
+}
+
+@mixin team-title {
+    @media screen and(max-width:767px) {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.19;
+        letter-spacing: 0.03em;
+    }
+}
+
+@mixin team-text {
+    @media screen and (max-width:767px) {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.19;
+        letter-spacing: 0.03em;
+    }
+}
+
+@mixin adress-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+@mixin footer-strong {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+@mixin footer-placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+}
 
 // @mixin roboto-bold {
 //     font-family: 'Roboto', 'sens-serif';
@@ -121,42 +205,7 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 
 // }
 
-// @mixin button {
-//     font-family: 'Roboto', 'sens-serif';
-//     font-style: normal;
-//     font-weight: 700;
-//     font-size: 16px;
-//     line-height: 1.88;
-//     letter-spacing: 0.06em;
-// }
 
-// @mixin title {
-//     font-family: 'Roboto', 'sens-serif';
-//     font-style: normal;
-//     font-weight: 700;
-//     font-size: 14px;
-//     line-height: 1.14;
-//     letter-spacing: 0.03em;
-// }
-
-// @mixin text {
-//     font-family: 'Roboto', 'sens-serif';
-//     font-style: normal;
-//     font-weight: 400;
-//     font-size: 14px;
-//     line-height: 1.71;
-//     letter-spacing: 0.03em;
-// }
-
-// @mixin caption {
-//     font-family: 'Roboto', 'sens-serif';
-//     font-style: normal;
-//     font-weight: 700;
-//     font-size: 36px;
-//     line-height: 1.17;
-//     text-align: center;
-//     letter-spacing: 0.03em;
-// }
 
 // @mixin input {
 //     font-family: 'Roboto';

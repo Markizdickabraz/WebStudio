@@ -1,0 +1,110 @@
+.footer {
+    background-color: getColor('footer-bgc-color');
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer__logo {
+    text-align: center;
+    color: getColor('white-color');
+}
+
+.adress {
+    margin-top: 20px;
+}
+
+.adress__list {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adress__link {
+    color: getColor('footer-link-color');
+    @include adress-link;
+
+    &:hover,
+    &:focus {
+        color: getColor('accent-color');
+    }
+}
+
+.address__link--white {
+    color: getColor('white-color');
+}
+
+.footer-icon {
+    // display: block;
+    padding-top: 60px;
+}
+
+.footer__strong {
+    display: block;
+    text-align: center;
+    color: getColor('white-color');
+    @include footer-strong;
+    margin-bottom: 20px;
+}
+
+.footer-icon__list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-icon__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: getColor('white-color');
+    background-color: getColor('footer-icon-color');
+
+    &:hover,
+    &:focus {
+        background-color: getColor('accent-color');
+    }
+}
+
+.footer-form__position {
+    padding-top: 60px;
+}
+
+.footer-form__input {
+    width: 100%;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: getColor('footer-bgc-color');
+    @include footer-placeholder;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    outline: none;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+
+.footer-form__btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    // align-items: center;
+    margin-top: 20px;
+    color: getColor('white-color');
+    background-color: getColor('accent-color');
+    fill: getColor('white-color');
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+    border: none;
+    border-radius: 4px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    @include button;
+}
