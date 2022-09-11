@@ -46,13 +46,17 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @mixin nav-text {
-
     font-weight: 500;
     font-size: 40px;
     line-height: 1.18;
-
     letter-spacing: 0.02em;
+
+    @media screen and(min-width:768px) {
+        font-size: 14px;
+        line-height: 1.14;
+    }
 }
+
 
 @mixin contact-text {
 
@@ -60,9 +64,16 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 24px;
     line-height: 1.17;
     letter-spacing: 0.02em;
+
+    @media screen and(min-width:768px) {
+        font-size: 12px;
+    }
 }
 
 @mixin contact-text--accent {
+    @media screen and(min-width:768px) {
+        @include contact-text;
+    }
 
     font-weight: 500;
     font-size: 34px;
@@ -78,14 +89,13 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @mixin hero-title {
-    @media screen and(max-width:767px) {
-        font-weight: 900;
-        font-size: 26px;
-        line-height: 1.62;
-        text-align: center;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-    }
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
 }
 
 @mixin button {
@@ -167,96 +177,47 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
     letter-spacing: 0.03em;
 }
 
-// @mixin roboto-bold {
-//     font-family: 'Roboto', 'sens-serif';
-//     font-style: normal;
-//     font-weight: 700;
-//     font-size: 14px;
-//     line-height: 1.14;
-//     letter-spacing: 0.03em;
-// }
+@mixin form-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
 
-// @mixin roboto-medium {
-//     font-family: 'Roboto', 'sens-serif';
-//     font-style: normal;
-//     font-weight: 500;
-//     font-size: 14px;
-//     line-height: 1.14;
-//     letter-spacing: 0.02em;
-// }
+@mixin label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+}
 
-// @mixin raleway-bold {
-//     font-family: 'Raleway', 'sens-serif';
-//     font-style: normal;
-//     font-weight: 700;
-//     font-size: 26px;
-//     line-height: 1.19;
-//     letter-spacing: 0.03em;
-// }
+@mixin textarea {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+}
 
-// @mixin roboto-black {
-//     font-family: 'Roboto', 'sens-serif';
-//     font-style: normal;
-//     font-weight: 900;
-//     font-size: 44px;
-//     line-height: 1.36;
-//     text-align: center;
-//     letter-spacing: 0.06em;
+@mixin checkbox {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+}
 
-// }
+@mixin portfolio-btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+}
 
-
-
-// @mixin input {
-//     font-family: 'Roboto';
-//     font-style: normal;
-//     font-weight: 400;
-//     font-size: 16px;
-//     line-height: 1.25;
-//     letter-spacing: 0.03em;
-// }
-
-// @mixin form__title {
-//     font-family: 'Roboto';
-//     font-style: normal;
-//     font-weight: 700;
-//     font-size: 20px;
-//     line-height: 1.15;
-//     letter-spacing: 0.03em;
-// }
-
-// @mixin label {
-//     font-family: 'Roboto';
-//     font-style: normal;
-//     font-weight: 400;
-//     font-size: 12px;
-//     line-height: 1.17;
-//     letter-spacing: 0.01em;
-// }
-
-// @mixin textarea {
-//     font-family: 'Roboto';
-//     font-style: normal;
-//     font-weight: 400;
-//     font-size: 12px;
-//     line-height: 1.17;
-//     letter-spacing: 0.01em;
-// }
-
-// @mixin portfolio-btn {
-//     font-family: 'Roboto';
-//     font-style: normal;
-//     font-weight: 500;
-//     font-size: 16px;
-//     line-height: 1.62;
-//     letter-spacing: 0.03em;
-// }
-
-// @mixin text-overlay {
-//     font-family: 'Roboto';
-//     font-style: normal;
-//     font-weight: 400;
-//     font-size: 18px;
-//     line-height: 1.56;
-//     letter-spacing: 0.03em;
-// }
+@mixin text-overlay {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+}

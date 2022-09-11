@@ -4,11 +4,18 @@
 
 .header__content {
     display: flex;
-    // flex-direction: row-reverse;
+
+    @media screen and(min-width:768px) {
+        // justify-content: space-between;
+        gap: 87px;
+    }
+
+    // flex-direction: row-reverse; 
+
 }
 
 .logo {
-    display: block;
+    display: inline-block;
     padding-top: 15px;
     padding-bottom: 15px;
     margin-right: auto;
@@ -18,6 +25,12 @@
 
     &--accent {
         color: getColor('accent-color');
+    }
+
+    @media screen and(min-width:768px) {
+        margin-right: 0;
+        padding-top: 26px;
+        padding-bottom: 26px;
     }
 }
 
@@ -71,12 +84,23 @@
     }
 
 
+
     @media screen and (min-width:480px) {
 
         padding-right: 40px;
         padding-left: 40px;
         padding-top: 48px;
         padding-bottom: 48px;
+
+    }
+
+    @media screen and (min-width:768px) {
+        padding: 0;
+        // padding-top: 21px;
+        // padding-bottom: 21px;
+        display: flex;
+        // align-items: center;
+        gap: 96px;
     }
 
     &.is-open {
@@ -93,32 +117,52 @@
 }
 
 .navigation__list {
+    display: flex;
+
     @media screen and (max-width:767px) {
-        display: flex;
         flex-direction: column;
         gap: 32px;
         padding-bottom: 302px;
     }
 
-}
-
-.contact__list {
-    @media screen and(max-width:767px) {
-        display: flex;
-        flex-direction: column-reverse;
-        gap: 32px;
-        padding-bottom: 64px;
+    @media screen and(min-width:768px) {
+        gap: 50px;
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 }
 
 
+
+
 .navigation__link {
-    // display: block;
+    display: block;
     @include nav-text;
     color: getColor('title-color');
 
     &--accent {
         color: getColor('accent-color');
+    }
+}
+
+// контакти
+.contact__list {
+    display: flex;
+
+    @media screen and(max-width:767px) {
+
+        flex-direction: column-reverse;
+        gap: 32px;
+        padding-bottom: 64px;
+    }
+
+    @media screen and(min-width:768px) {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 21px;
+        padding-bottom: 21px;
+        // margin-right: auto;
+        // margin-left: auto;
     }
 }
 
@@ -130,6 +174,17 @@
         @include contact-text--accent;
         color: getColor('accent-color');
     }
+
+    @media screen and(min-width:768px) {
+        &--accent {
+            color: getColor('text-color');
+        }
+
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 8px;
+        justify-content: start;
+    }
 }
 
 .contact__icon {
@@ -138,7 +193,12 @@
     }
 }
 
+//  соцмережі 
 .social-network__list {
+    @media screen and(min-width:768px) {
+        display: none;
+    }
+
     display: flex;
     gap: 20px;
 }
@@ -165,4 +225,27 @@
     @include social-network;
     color: getColor('accent-color');
 
+}
+
+// лінія активної сторнки
+@media screen and (max-width:767px) {
+    .accent-line {
+        display: none;
+    }
+}
+
+.accent-line {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -34px;
+        width: 100%;
+        height: 4px;
+        display: block;
+        border-radius: 2px;
+        background-color: getColor('accent-color');
+    }
 }
