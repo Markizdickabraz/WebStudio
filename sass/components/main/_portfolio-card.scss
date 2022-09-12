@@ -1,5 +1,10 @@
-.title {
+.card__title {
     text-align: start;
+    @include card-title;
+}
+
+.card__text {
+    @include card-text;
 }
 
 .card__list {
@@ -10,9 +15,7 @@
 }
 
 .card__item {
-    @media screen and (max-width:767px) {
-        width: 450px;
-    }
+    width: 450px;
 }
 
 .card__img {
@@ -68,4 +71,10 @@
     border-left: 1px solid getColor('portfolio-border-color');
     border-right: 1px solid getColor('portfolio-border-color');
     border-bottom: 1px solid getColor('portfolio-border-color');
+}
+
+@media screen and (min-width:768px) {
+    .card__item {
+        width: 354px;
+    }
 }

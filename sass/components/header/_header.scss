@@ -14,11 +14,21 @@
 
 }
 
-.logo {
-    display: inline-block;
+.header__logo {
+
     padding-top: 15px;
     padding-bottom: 15px;
     margin-right: auto;
+
+    @media screen and(min-width:768px) {
+        margin-right: 0;
+        padding-top: 26px;
+        padding-bottom: 26px;
+    }
+}
+
+.logo {
+    display: block;
     text-decoration: none;
     color: getColor('header-logo-color');
     @include logo-font;
@@ -27,11 +37,7 @@
         color: getColor('accent-color');
     }
 
-    @media screen and(min-width:768px) {
-        margin-right: 0;
-        padding-top: 26px;
-        padding-bottom: 26px;
-    }
+
 }
 
 .nav__button {
@@ -228,16 +234,16 @@
 }
 
 // лінія активної сторнки
-@media screen and (max-width:767px) {
-    .accent-line {
-        display: none;
-    }
-}
+
 
 .accent-line {
     position: relative;
 
     &::after {
+        @media screen and(max-width:767px) {
+            display: none;
+        }
+
         content: "";
         position: absolute;
         left: 0;

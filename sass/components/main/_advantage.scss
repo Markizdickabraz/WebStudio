@@ -1,19 +1,9 @@
 .advantage {
     padding-top: 60px;
-    display: flex;
-    gap: 30px;
-
-    @media screen and(min-width:768px) {
-        .advantage__list {
-            width: 354px;
-        }
-    }
+    padding-bottom: 60px;
 }
 
 .advantage__container {
-    @media screen and(min-width:768px) {
-        width: 354px;
-    }
 
     max-width: 450px;
     max-height: 120px;
@@ -33,5 +23,36 @@
 
 .text {
     @include text;
-    color: getColor('text-color');
+}
+
+.title {
+    @include advantage-title;
+}
+
+.caption {
+    @include caption;
+    text-align: center;
+    // padding-bottom: 30px;
+}
+
+.advantage__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media screen and(min-width:768px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and(min-width:768px) {
+    .advantage__item {
+        width: 354px;
+    }
+
+    .advantage {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }

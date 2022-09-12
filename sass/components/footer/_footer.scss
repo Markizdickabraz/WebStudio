@@ -108,3 +108,23 @@
     cursor: pointer;
     @include button;
 }
+
+@media screen and(min-width:768px) {
+    .footer__position {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px 165px;
+        // align-items: center;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .footer-form__input {
+        width: 450px;
+    }
+
+    .footer-form__position,
+    .footer-icon {
+        padding-top: 0;
+    }
+}

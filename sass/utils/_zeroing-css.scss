@@ -7,9 +7,9 @@ h6,
 p,
 ul {
     margin: 0;
-    margin: 0;
+    // margin: 0;
     padding: 0;
-    padding: 0;
+    // padding: 0;
 }
 
 body {
@@ -23,7 +23,6 @@ body {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-    overflow-y: hidden;
 
 
     @media screen and(min-width:768px) {
@@ -54,16 +53,3 @@ body {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-
-// .title {
-//     @include title;
-//     // margin-bottom: 10px;
-//     color: getColor('title-color');
-//     // text-transform: uppercase;
-// }
-
-// .text {
-//     margin-top: 10px;
-//     @include text;
-//     color: getColor('text-color');
-// }
