@@ -25,6 +25,11 @@
         padding-top: 26px;
         padding-bottom: 26px;
     }
+
+    @media screen and (min-width:1200px) {
+        padding-top: 24px;
+        padding-bottom: 25px;
+    }
 }
 
 .logo {
@@ -106,7 +111,12 @@
         // padding-bottom: 21px;
         display: flex;
         // align-items: center;
+
         gap: 96px;
+    }
+
+    @media screen and(min-width:1200px) {
+        gap: 315px;
     }
 
     &.is-open {
@@ -123,6 +133,7 @@
 }
 
 .navigation__list {
+    // position: relative;
     display: flex;
 
     @media screen and (max-width:767px) {
@@ -133,8 +144,9 @@
 
     @media screen and(min-width:768px) {
         gap: 50px;
-        padding-top: 32px;
-        padding-bottom: 32px;
+        padding-bottom: 0;
+        // padding-top: 32px;
+        // padding-bottom: 32px;
     }
 }
 
@@ -142,18 +154,32 @@
 
 
 .navigation__link {
+    // position: relative;
     display: block;
     @include nav-text;
     color: getColor('title-color');
+    transition: color 250ms $cubic-bezier;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
     &--accent {
         color: getColor('accent-color');
+    }
+
+    @media screen and(min-width:1200px) {
+
+
+        &:hover,
+        &:focus {
+            color: getColor('accent-color');
+        }
     }
 }
 
 // контакти
 .contact__list {
     display: flex;
+
 
     @media screen and(max-width:767px) {
 
@@ -167,14 +193,21 @@
         gap: 10px;
         padding-top: 21px;
         padding-bottom: 21px;
-        // margin-right: auto;
-        // margin-left: auto;
+    }
+
+    @media screen and(min-width:1200px) {
+        padding: 0;
+        flex-direction: row;
+        gap: 30px;
+        margin-left: auto;
     }
 }
 
 .contact__link {
     @include contact-text;
     color: getColor('text-color');
+    transition: fill 250ms $cubic-bezier, color 250ms $cubic-bezier;
+
 
     &--accent {
         @include contact-text--accent;
@@ -182,6 +215,7 @@
     }
 
     @media screen and(min-width:768px) {
+
         &--accent {
             color: getColor('text-color');
         }
@@ -190,6 +224,18 @@
         flex-direction: row-reverse;
         gap: 8px;
         justify-content: start;
+    }
+
+    @media screen and (min-width:1200px) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        align-items: center;
+
+        &:hover,
+        &:focus {
+            color: getColor('accent-color');
+            fill: getColor('accent-color');
+        }
     }
 }
 
@@ -247,7 +293,7 @@
         content: "";
         position: absolute;
         left: 0;
-        bottom: -34px;
+        bottom: -1px;
         width: 100%;
         height: 4px;
         display: block;

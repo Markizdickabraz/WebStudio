@@ -6,6 +6,11 @@
         background-color: getColor('light-grey-color');
     }
 
+    @media screen and(min-width:1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+
 }
 
 .team__list {
@@ -19,6 +24,10 @@
         flex-direction: row;
         flex-wrap: wrap;
     }
+
+    @media screen and(min-width:1200px) {
+        padding-top: 50px;
+    }
 }
 
 .team__item {
@@ -28,6 +37,9 @@
         max-width: 354px;
     }
 
+    @media screen and(min-width:1200px) {
+        width: 270px;
+    }
 }
 
 .team__img {
