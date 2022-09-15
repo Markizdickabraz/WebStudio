@@ -23,6 +23,7 @@
 .adress__link {
     color: getColor('footer-link-color');
     @include adress-link;
+    transition: color 250ms $cubic-bezier;
 
     &:hover,
     &:focus {
@@ -62,6 +63,7 @@
     border-radius: 50%;
     fill: getColor('white-color');
     background-color: getColor('footer-icon-color');
+    transition: background-color 250ms $cubic-bezier;
 
     &:hover,
     &:focus {
@@ -117,6 +119,7 @@
         // align-items: center;
         justify-content: center;
         align-items: flex-start;
+
     }
 
     .footer-form__input {
@@ -126,5 +129,52 @@
     .footer-form__position,
     .footer-icon {
         padding-top: 0;
+    }
+}
+
+@media screen and(min-width:1200px) {
+    .adress__link {
+        gap: 9px;
+    }
+
+    .footer__position {
+        flex-wrap: nowrap;
+        gap: 0;
+        align-items: baseline;
+        // text-align: start;
+    }
+
+    .footer-form__position {
+        margin-left: auto;
+    }
+
+    .footer-form {
+        display: flex;
+        // align-items: center;
+        gap: 12px;
+    }
+
+    .footer-form__input {
+        width: 358px;
+    }
+
+    .footer-icon {
+        margin-left: 70px;
+    }
+
+    .footer-form__btn {
+        margin-top: 0;
+    }
+
+    .footer__strong {
+        text-align: start;
+    }
+
+    .adress__list {
+        align-items: flex-start;
+    }
+
+    .footer__logo {
+        text-align: start;
     }
 }

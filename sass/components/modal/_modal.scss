@@ -12,7 +12,6 @@
 .is-hidden {
     opacity: 0;
     pointer-events: none;
-    // transform: translate(-50%, -50%) scale(0.9);
 }
 
 .modal {
@@ -21,13 +20,18 @@
         height: 609px;
     }
 
+    @media screen and(min-width:1200px) {
+        width: 528px;
+        height: 581px;
+    }
+
     position: absolute;
     top: 50%;
     left: 50%;
 
     background-color: getColor('white-color');
     transform: translate(-50%, -50%) scale(1);
-    transition: transform 250ms $cubic-bezier;
+    // transition: transform 11s $cubic-bezier;
     padding: 40px;
 }
 
@@ -46,7 +50,7 @@
     border: 1px solid getColor('border-modal-icon');
     border-radius: 50%;
     cursor: pointer;
-    transition: fill 250ms getColor('cubic-bezier');
+    transition: fill 250ms $cubic-bezier;
 
     &:hover,
     &:focus {
@@ -83,6 +87,7 @@
     display: flex;
     flex-direction: column;
     @include label;
+    transition: fill 250ms $cubic-bezier, border 250ms $cubic-bezier;
 
     &:focus-within .form__icon {
         fill: getColor('accent-color');
@@ -154,9 +159,21 @@
 }
 
 .form__link {
-    text-decoration: none;
+    display: block;
+    position: relative;
+    // text-decoration: none;
     color: getColor('accent-color');
-    border-bottom: 1px solid getColor('accent-color');
+
+    // border-bottom: 1px solid getColor('accent-color');
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     left: 0;
+    //     bottom: 0;
+    //     width: 100%;
+    //     height: 1px;
+    //     background-color: getColor('accent-color');
+    // }
 }
 
 .form__icon-checkbox {
