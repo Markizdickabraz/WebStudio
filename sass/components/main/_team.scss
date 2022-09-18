@@ -1,10 +1,8 @@
 .team {
     padding-top: 60px;
     padding-bottom: 60px;
+    background-color: getColor('light-grey-color');
 
-    @media screen and (min-width:768px) {
-        background-color: getColor('light-grey-color');
-    }
 
     @media screen and(min-width:1200px) {
         padding-top: 94px;
@@ -18,7 +16,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding-top: 30px;
+    margin-top: 30px;
 
     @media screen and(min-width:768px) {
         flex-direction: row;
@@ -26,7 +24,7 @@
     }
 
     @media screen and(min-width:1200px) {
-        padding-top: 50px;
+        margin-top: 50px;
     }
 }
 
@@ -54,6 +52,11 @@
     background-color: getColor('white-color');
 }
 
+.team__title {
+    @include team-title;
+    margin-bottom: 10px;
+}
+
 .team__text {
     text-align: center;
     @include team-text;
@@ -73,7 +76,6 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    padding: 12px;
     display: flex;
     align-items: center;
     justify-content: center;

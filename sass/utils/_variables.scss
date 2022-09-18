@@ -128,7 +128,7 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
-    text-transform: uppercase;
+    // text-transform: uppercase;
 }
 
 @mixin text {
@@ -151,12 +151,14 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 
 
 @mixin team-title {
-    @media screen and(max-width:767px) {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.19;
-        letter-spacing: 0.03em;
-    }
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-align: center;
+
+
 }
 
 @mixin team-text {
@@ -264,12 +266,21 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
     letter-spacing: 0.03em;
 }
 
+
 .title {
     text-align: center;
     margin-bottom: 10px;
     color: getColor('title-color');
+    @include advantage-title;
 }
 
 .text {
     color: getColor('text-color');
+    @include text;
+}
+
+.caption {
+    @include caption;
+    text-align: center;
+    // padding-bottom: 30px;
 }

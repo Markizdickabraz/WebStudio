@@ -47,6 +47,14 @@
     @include text-overlay;
     transition: transform 250ms $cubic-bezier;
 
+    @media screen and(max-width:480px) {
+        // text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     @media screen and(min-width:480px) {
         padding-top: 77px;
         padding-bottom: 77px;
@@ -66,7 +74,9 @@
 
 .card__link {
     text-decoration: none;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
     &:hover,
     &:focus,
@@ -81,6 +91,7 @@
 }
 
 .card__border {
+    flex-grow: 1;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 24px;

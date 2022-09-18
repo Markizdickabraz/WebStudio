@@ -8,11 +8,12 @@
 .advantage__container {
 
     max-width: 450px;
-    max-height: 120px;
+    height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
+    background-color: getColor('light-grey-color');
 
 }
 
@@ -21,25 +22,13 @@
     color: getColor('title-color');
     text-align: center;
     margin-bottom: 10px;
+    text-transform: uppercase;
 
     @media screen and(min-width:768px) {
         text-align: start;
     }
 }
 
-.text {
-    @include text;
-}
-
-.title {
-    @include advantage-title;
-}
-
-.caption {
-    @include caption;
-    text-align: center;
-    // padding-bottom: 30px;
-}
 
 .advantage__list {
     display: flex;
