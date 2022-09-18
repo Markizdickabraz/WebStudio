@@ -168,11 +168,13 @@
 }
 
 .form__icon-checkbox {
-    display: inline-block;
+    display: block;
     background-image: url("../images/no-check.svg");
+    // border: 2px solid getColor('header-logo-color');
     width: 16px;
     height: 15px;
     transition: background-image 250ms $cubic-bezier;
+
     // margin-right: 8px;
 
     .form__input-checkbox:checked~& {

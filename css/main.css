@@ -1158,7 +1158,7 @@ body {
 }
 
 .form__icon-checkbox {
-  display: inline-block;
+  display: block;
   background-image: url("../images/no-check.svg");
   width: 16px;
   height: 15px;
