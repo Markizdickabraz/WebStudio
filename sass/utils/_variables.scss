@@ -139,12 +139,15 @@ $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @mixin caption {
-    @media (max-width:767px) {
-        font-weight: 700;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    @media (min-width:768px) {
         font-size: 36px;
         line-height: 1.17;
-        text-align: center;
-        letter-spacing: 0.03em;
     }
 
 }
